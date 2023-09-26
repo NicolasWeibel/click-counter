@@ -2,16 +2,19 @@ import './App.css';
 import Button from './components/Button';
 import Counter from './components/Counter';
 import clickCounterLogo from './images/click-counter-logo.png'
+import { useState } from 'react';
 
 function App() {
 
+  const [clicksNumber, setClicksNumber] = useState(0);
+
   const addCounter = () => {
-    console.log('Add')
-  }
+    setClicksNumber(clicksNumber + 1);
+  };
 
   const resetCounter = () => {
-    console.log('Reset')
-  }
+    setClicksNumber(0)
+  };
 
 
   return (
@@ -20,7 +23,7 @@ function App() {
         <img className='click-counter-logo' src={clickCounterLogo} alt='Click Counter Logo' />
       </div>
       <div className='main-container'>
-        <Counter clicksNumber={5} />
+        <Counter clicksNumber={clicksNumber} />
         <Button text='Click' isClickButton={true} handleClick={addCounter} />
         <Button text='Reset' isClickButton={false} handleClick={resetCounter} />
       </div>
