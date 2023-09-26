@@ -7,6 +7,9 @@ function App() {
       <div className='click-counter-container-logo'>
         <img className='click-counter-logo' src={clickCounterLogo} alt='Click Counter Logo' />
       </div>
+      <div className='main-container'>
+        
+      </div>
     </div>
   );
 }
