@@ -3,14 +3,24 @@ import Button from './components/Button';
 import clickCounterLogo from './images/click-counter-logo.png'
 
 function App() {
+
+  const addCounter = () => {
+    console.log('Add')
+  }
+
+  const resetCounter = () => {
+    console.log('Reset')
+  }
+
+
   return (
     <div className='App'>
       <div className='click-counter-container-logo'>
         <img className='click-counter-logo' src={clickCounterLogo} alt='Click Counter Logo' />
       </div>
       <div className='main-container'>
-        <Button text='Click' isClickButton={true} handleClick={} />
-        <Button text='Reset' isClickButton={false} handleClick={} />
+        <Button text='Click' isClickButton={true} handleClick={addCounter} />
+        <Button text='Reset' isClickButton={false} handleClick={resetCounter} />
       </div>
     </div>
   );
